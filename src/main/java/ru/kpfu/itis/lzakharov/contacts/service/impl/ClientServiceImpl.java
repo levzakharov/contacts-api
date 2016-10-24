@@ -12,6 +12,21 @@ public class ClientServiceImpl implements ClientService {
     ClientRepository clientRepository;
 
     @Override
+    public Client create(Client client) {
+        if (clientRepository.findByUsername(client.getUsername()) == null) {
+            return clientRepository.save(client);
+        } else {
+            // TODO: throw exception
+            return null;
+        }
+    }
+
+    @Override
+    public Client find(String username) {
+        return clientRepository.findByUsername(username);
+    }
+
+    @Override
     public Client find(String username, String password) {
         return clientRepository.findByUsernameAndPassword(username, password);
     }

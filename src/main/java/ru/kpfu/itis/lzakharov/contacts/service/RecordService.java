@@ -1,0 +1,1 @@
+package ru.kpfu.itis.lzakharov.contacts.service;import ru.kpfu.itis.lzakharov.contacts.model.Record;import java.util.List;public interface RecordService {    List<Record> find(String username);    Record create(Record record);}

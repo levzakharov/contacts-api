@@ -3,7 +3,6 @@ package ru.kpfu.itis.lzakharov.contacts.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.kpfu.itis.lzakharov.contacts.model.Client;
@@ -17,26 +16,33 @@ import java.security.Principal;
 @Controller
 public class MainController {
     @Autowired
-    ClientRepository clientRepository;
-
-    @Autowired
     ClientService clientService;
 
     @RequestMapping(value = "/hello")
     @ResponseBody
     public String sayHello() {
-        Client client = new Client();
-        client.setId(1L);
-        client.setUsername("Lev");
-        client.setPassword("password");
-        clientRepository.save(client);
-
         return "Hello!";
     }
 
     @RequestMapping(value = "/api/user", method = RequestMethod.POST)
-    public ResponseEntity<?> user(Principal principal) {
+    public ResponseEntity<String> user(Principal principal) {
         return ResponseEntity.ok(principal.getName());
+    }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public ResponseEntity<?> createClient(@RequestParam(name = "username") String username,
+                                               @RequestParam(name = "password") String password) {
+        Client client = new Client();
+        client.setUsername(username);
+        client.setPassword(password);
+
+        Client createdClient = clientService.create(client);
+
+        if (createdClient != null) {
+            return ResponseEntity.ok(createdClient);
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User with this username already exists");
+        }
     }
 
     @RequestMapping(value = "/token", method = RequestMethod.POST)
