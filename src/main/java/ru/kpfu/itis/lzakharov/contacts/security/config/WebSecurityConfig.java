@@ -10,11 +10,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import ru.kpfu.itis.lzakharov.contacts.security.JwtAuthenticationEntryPoint;
 import ru.kpfu.itis.lzakharov.contacts.security.JwtAuthenticationProvider;
 import ru.kpfu.itis.lzakharov.contacts.security.JwtAuthenticationSuccessHandler;
 import ru.kpfu.itis.lzakharov.contacts.security.JwtAuthenticationTokenFilter;
+import ru.kpfu.itis.lzakharov.contacts.security.filter.CorsFilter;
 
 import java.util.Arrays;
 
@@ -44,6 +46,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // add CORS filter
+        http.addFilterBefore(new CorsFilter(), ChannelProcessingFilter.class);
+
         http
             // we don't need CSRF because our token is invulnerable
             .csrf().disable()
