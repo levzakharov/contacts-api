@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5227172-06bb-43c5-8f29-b477735e0a98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/security/filter/CorsFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/model/Record.class" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/model/Record.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/security/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/security/config/WebSecurityConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/web/RecordController.class" afterPath="$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/web/RecordController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/model/Record.java" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/model/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/security/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/security/config/WebSecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/service/RecordService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/service/RecordService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/service/impl/RecordServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/service/impl/RecordServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/web/RecordController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/web/RecordController.java" />
     </list>
     <ignored path="contacts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1044,12 +1038,20 @@
       <workItem from="1476773010253" duration="6684000" />
       <workItem from="1476976174783" duration="6123000" />
       <workItem from="1477308287211" duration="8631000" />
-      <workItem from="1477893023113" duration="6277000" />
+      <workItem from="1477893023113" duration="6302000" />
     </task>
+    <task id="LOCAL-00001" summary="123">
+      <created>1477903041719</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1477903041719</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35086000" />
+    <option name="totallyTimeSpent" value="35111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1095,6 +1097,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="10" />
@@ -1106,14 +1112,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/kpfu/itis/lzakharov/contacts/model/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1472,6 +1470,16 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
             <element signature="e#1526#1527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/ru/kpfu/itis/lzakharov/contacts/model/Record.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1160#0" expanded="true" />
           </folding>
         </state>
       </provider>
